@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="Rotation.js"></script>
+        <script src="DiverRotation.js"></script>
+
+</head>
+
+<body>
+
+    <a-scene>
+        <a-assets timeout="10000">
+            <a-assets-item id="ocean" src="./modals/ocean/scene.gltf"></a-assets-item>
+            <a-assets-item id="diver" src="./modals/diver/scene.gltf"></a-assets-item>
+        </a-assets>
+
+        <a-camera position="-100 -30 -440" rotation="270 0 0" wasd-controls-enabled="false">
+        </a-camera> 
+        <a-entity gltf-model="#ocean" scale="75 35 75" rotation="0 90 0" terrain-rotation-reader></a-entity>
+        <a-entity gltf-model="#diver" position="-100 -60 -455" scale="0.3 0.3 0.3" rotation="0 180 0" diver-rotate></a-entity>
+    </a-scene>
+
+</body>
+
+</html>
